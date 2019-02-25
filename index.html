@@ -67,7 +67,7 @@
       <div class="popup-scroll">
         <img src="images/logo.png" alt="">
         
-        <form action="modals/sender.php" class="form-quote" method="post">
+        <form action="https://formspree.io/mikehenken@gmail.com" method="POST" />
           <h1>Ready to start your project?</h1>
 
           <input type="text" class="field" value="Your Name" title="Your Name" name="name" id="quote-name">
@@ -79,28 +79,28 @@
           <div class="labels cf">
             <div class="radio left">
               <label>
-                <input type="radio" value="Under $15k" name="radio">
+                <input type="radio" value="Under $15k" name="budget">
                 Under $15k
               </label>
             </div><!-- /.radio -->
 
             <div class="radio left">
               <label>
-                <input type="radio" value="$15k - $50k" name="radio">
+                <input type="radio" value="$15k - $50k" name="budget">
                 $15k - $50k
               </label>
             </div><!-- /.radio -->
 
             <div class="radio left">
               <label>
-                <input type="radio" value="Over $50k" name="radio">
+                <input type="radio" value="Over $50k" name="budget">
                 Over $50k
               </label>
             </div><!-- /.radio -->
 
             <div class="radio left">
               <label>
-                <input type="radio" value="Not Sure" name="radio">
+                <input type="radio" value="Not Sure" name="budget">
                 Not Sure
               </label>
             </div><!-- /.radio -->
@@ -125,12 +125,13 @@ $("#getQuote").click(function(){
   $(".quote").fadeIn();
 });
 $(".quote .close").click(function(){
-  $(".quote").hide();w
+  $(".quote").hide();
 })
 $('.quote form').submit(function(e){
   $('.quote form').hide();
   $('.quote .success-message').show();
-  e.preventDefault();
+  console.log('clicked');
+ /*e.preventDefault();*/
 });
 $('.quote form input, .quote form textarea').focus(function(e){
   $(this).val('');

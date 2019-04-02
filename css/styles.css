@@ -74,7 +74,7 @@ sub { line-height: 1; }
 
 
 section.module.parallax-1 {
-	background-image:url('../images/hero-bg.png');
+	background-image:url('../images/hero-bg.jpg');
 	background-position:center center;
 	background-size:cover;
 	background-color:#001B1B;
@@ -229,6 +229,7 @@ input.button, button.button, #respond p input#submit {
     position: relative;
     cursor: pointer;
 }
+
 .labels { width: 598px; padding: 24px 0 35px; border-top: 1px solid #f09aba; margin: 0 auto; margin-bottom:3em; }
 .labels .radio,
 .labels .checkbox { width: 141px; padding-left: 11px; position:relative; }
@@ -238,6 +239,14 @@ input.button, button.button, #respond p input#submit {
 .labels .checked label { background: #631666; }
 
 .labels .field-error label { color: #f00; border-color: #f00; }
+@media (max-width:597px) {
+
+  .labels { 
+	width:90%
+  }
+  .labels .radio { margin-bottom:1em;}
+  .field { font-size:1.3em } 
+}
 
 .success-message { display: none; }
 .success-message h1 { padding-bottom: 25px; }
@@ -281,7 +290,7 @@ section { display:block; }
 	.card1 h1 {
 	    font-size: 2.5em;
 	}
-	.popup h1 {
+	.popup h1, .popup h2 {
 	    font-size: 25px;
 	}
 	input, textarea, select {
